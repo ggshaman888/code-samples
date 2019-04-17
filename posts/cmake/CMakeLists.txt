@@ -2,6 +2,23 @@
 cmake_minimum_required(VERSION 3.8 FATAL_ERROR)
 project(cmake_and_cuda LANGUAGES CXX CUDA)
 
+<<<<<<< Updated upstream
+=======
+project(cmake_and_cuda CXX CUDA)
+##include(FindCUDA)
+
+##set(CMAKE_CXX_STANDARD 14)
+##find_package( OpenCV REQUIRED )
+##find_package(CUDA REQUIRED)
+set(CUDA_NVCC_FLAGS ${CUDA_NVCC_FLAGS} -gencode arch=compute_30,code=sm_30)
+
+##target_link_libraries(cmake_and_cuda Threads::Threads)
+
+##include_directories( ${OpenCV_INCLUDE_DIRS} )
+
+##cuda_add_executable(train train.cu)
+##target_link_libraries( train ${OpenCV_LIBS} )cmake
+>>>>>>> Stashed changes
 include(CTest)
 
 add_library(particles STATIC
@@ -12,6 +29,7 @@ add_library(particles STATIC
   v3.cu
   v3.h
   )
+
 
 # Request that particles be built with -std=c++11
 # As this is a public compile feature anything that links to particles
